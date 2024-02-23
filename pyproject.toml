@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "merge_pdfs"
+version = "0.1.0"
+description = ""
+authors = ["tumf <y.takahara@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pypdf2 = "^3.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.setuptools_scm]
