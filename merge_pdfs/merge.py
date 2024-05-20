@@ -32,14 +32,14 @@ def convert_image_to_pdf(image_file, pdf_path):
 @click.argument('files', nargs=-1)
 @click.option('-o', '--output', type=str, default='merged.pdf',
               help='The output PDF file name.')
-def merge_pdfs(files, output):
-    if len(files) < 3:
+def merge_pdfs(files):
+    if len(files) < 2:
         click.echo("Merge PDFs version 0.1.0")
         click.echo("USAGE: python src/merge.py <pdf1> <pdf2> <pdf3> ... "
               "[-o output_filename]")
-        sys.exit()
+        sys.exit(0)
 
-    output_pdf_filename, src_paths = get_output_filename(args[1:])
+    output_pdf_filename, src_paths = get_output_filename(files)
     output_pdf = PdfWriter()
 
     for src_path in src_paths:
