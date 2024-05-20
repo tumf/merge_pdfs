@@ -8,10 +8,16 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.10"
 pypdf2 = "^3.0.1"
-
+pillow = "^10.3.0"
+click = "^8.1.7"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.setuptools_scm]
+
+
+[tool.poetry.scripts]
+merge_pdfs = "merge_pdfs.merge:merge_pdfs"
+
